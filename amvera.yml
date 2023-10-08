@@ -4,10 +4,6 @@ meta:
   toolchain:
     name: npm
     version: 14
-build:
-  artifacts:
-    '*': /
 run:
   scriptName: index.js
-  persistenceMount: /data
   containerPort: 80
