@@ -1,8 +1,9 @@
+---
 meta:
   environment: node
   toolchain:
     name: npm
-    version: 18
+    version: 14
 build:
   artifacts:
     '*': /
