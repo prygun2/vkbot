@@ -5,5 +5,5 @@ meta:
     name: npm
     version: 16
 run:
-  scriptName: index.js
+  scriptName: src/main.js
   containerPort: 80
