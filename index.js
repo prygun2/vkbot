@@ -4,7 +4,6 @@ const url = require('url');
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
 
-    // Проверка роута
     if (parsedUrl.pathname === '/') {
         res.writeHead(200, {'Content-Type': 'text/plain'});
         res.end('Hello, this is the main route!');
