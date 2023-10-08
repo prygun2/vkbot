@@ -6,7 +6,7 @@ export class ConfirmationController {
   constructor(private configService: ConfigService) {}
 
   @Post()
-  createPost(@Body() body: any): string {
+  get(@Body() body: any): string {
     console.log(body) // Здесь вы можете увидеть отправленные данные
 
     const groupId = this.configService.get("GROUP_ID")

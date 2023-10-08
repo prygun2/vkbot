@@ -19,13 +19,13 @@ let ConfirmationController = class ConfirmationController {
     constructor(configService) {
         this.configService = configService;
     }
-    createPost(body) {
+    get(body) {
         console.log(body);
-        const groupId = this.configService.get('GROUP_ID');
-        if (body.type === 'confirmation' && String(body.group_id) === groupId) {
-            return 'OK';
+        const groupId = this.configService.get("GROUP_ID");
+        if (body.type === "confirmation" && String(body.group_id) === groupId) {
+            return "OK";
         }
-        return 'Error';
+        return "Error";
     }
 };
 exports.ConfirmationController = ConfirmationController;
@@ -35,9 +35,9 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", String)
-], ConfirmationController.prototype, "createPost", null);
+], ConfirmationController.prototype, "get", null);
 exports.ConfirmationController = ConfirmationController = __decorate([
-    (0, common_1.Controller)('confirmation'),
+    (0, common_1.Controller)("confirmation"),
     __metadata("design:paramtypes", [config_1.ConfigService])
 ], ConfirmationController);
 //# sourceMappingURL=confirmation.controller.js.map
