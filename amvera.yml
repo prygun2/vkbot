@@ -4,7 +4,7 @@ meta:
   toolchain:
     name: npm
     version: 16
-build: {}
+build: { }
 run:
   scriptName: src/main.js
   containerPort: 80
