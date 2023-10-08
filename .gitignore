@@ -26,3 +26,6 @@ node_modules/
 
 # VS Code (если вы также используете VS Code)
 .vscode/
+
+#Environment variables file
+.env

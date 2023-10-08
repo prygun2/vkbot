@@ -14,10 +14,18 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConfirmationController = void 0;
 const common_1 = require("@nestjs/common");
+const config_1 = require("@nestjs/config");
 let ConfirmationController = class ConfirmationController {
+    constructor(configService) {
+        this.configService = configService;
+    }
     createPost(body) {
         console.log(body);
-        return 'POST запрос успешно обработан!';
+        const groupId = this.configService.get('GROUP_ID');
+        if (body.type === 'confirmation' && String(body.group_id) === groupId) {
+            return 'OK';
+        }
+        return 'Error';
     }
 };
 exports.ConfirmationController = ConfirmationController;
@@ -29,6 +37,7 @@ __decorate([
     __metadata("design:returntype", String)
 ], ConfirmationController.prototype, "createPost", null);
 exports.ConfirmationController = ConfirmationController = __decorate([
-    (0, common_1.Controller)('confirmation')
+    (0, common_1.Controller)('confirmation'),
+    __metadata("design:paramtypes", [config_1.ConfigService])
 ], ConfirmationController);
 //# sourceMappingURL=confirmation.controller.js.map
