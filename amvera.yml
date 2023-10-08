@@ -10,4 +10,4 @@ build:
 run:
   scriptName: /index.js
   persistenceMount: /data
-  containerPort: 3333
+  containerPort: 80
