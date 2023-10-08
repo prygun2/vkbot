@@ -8,7 +8,7 @@ export class ConfirmationController {
 
     @Post()
     createPost(@Body() body: any): string {
-        console.log(body);
+        console.log(body); // Здесь вы можете увидеть отправленные данные
 
         const groupId = this.configService.get('GROUP_ID');
 
