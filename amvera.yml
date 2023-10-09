@@ -3,8 +3,7 @@ meta:
   environment: node
   toolchain:
     name: npm
-    version: 16
-build: { }
+    version: 14
 run:
   scriptName: server.ts
   containerPort: 80
