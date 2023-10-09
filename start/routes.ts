@@ -25,5 +25,5 @@ Route.get("/", async () => {
 })
 
 Route.group(() => {
-  Route.post("confirmation", "ConfirmationsController.confirm")
+  Route.post("callback", "CallbackController.run")
 }).prefix("api")
