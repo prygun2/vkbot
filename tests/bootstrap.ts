@@ -42,7 +42,6 @@ export const plugins: Required<Config>["plugins"] = [
 |
 */
 export const reporters: Required<Config>["reporters"] = [specReporter()]
-;
 /*
 |--------------------------------------------------------------------------
 | Runner hooks
