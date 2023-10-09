@@ -6,5 +6,5 @@ meta:
     version: 16
 build: { }
 run:
-  scriptName: index.js
+  scriptName: server.ts
   containerPort: 80
