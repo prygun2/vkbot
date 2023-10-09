@@ -12,7 +12,7 @@
 |
 */
 
-import Env from "@ioc:Adonis/Core/Env";
+import Env from "@ioc:Adonis/Core/Env"
 
 export default Env.rules({
   HOST: Env.schema.string({ format: "host" }),
@@ -23,4 +23,4 @@ export default Env.rules({
   NODE_ENV: Env.schema.enum(["development", "production", "test"] as const),
   GROUP_ID: Env.schema.number(),
   CONFIRMATION_CODE: Env.schema.string(),
-});
+})

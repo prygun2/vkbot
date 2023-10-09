@@ -25,7 +25,7 @@ import type { ValidatorConfig } from "@ioc:Adonis/Core/Validator";
 | be decrypted.
 |
 */
-export const appKey: string = Env.get("APP_KEY");
+export const appKey: string = Env.get("APP_KEY")
 
 /*
 |--------------------------------------------------------------------------
@@ -127,7 +127,7 @@ export const http: ServerConfig = {
   |
   */
   forceContentNegotiationTo: "application/json",
-};
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -181,7 +181,7 @@ export const logger: LoggerConfig = {
   |
   */
   prettyPrint: Env.get("NODE_ENV") === "development",
-};
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -220,7 +220,7 @@ export const profiler: ProfilerConfig = {
   |
   */
   whitelist: [],
-};
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -231,4 +231,4 @@ export const profiler: ProfilerConfig = {
 | to the default config https://git.io/JT0WE
 |
 */
-export const validator: ValidatorConfig = {};
+export const validator: ValidatorConfig = {}

@@ -93,4 +93,4 @@ export default hashConfig({
       rounds: 10,
     },
   },
-});
+})

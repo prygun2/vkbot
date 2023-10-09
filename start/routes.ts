@@ -18,14 +18,12 @@
 |
 */
 
-import Route from "@ioc:Adonis/Core/Route";
+import Route from "@ioc:Adonis/Core/Route"
 
 Route.get("/", async () => {
-  return { hello: "world" };
-});
+  return { hello: "world" }
+})
 
 Route.group(() => {
-  Route.post("confirmation", "ConfirmationsController.confirm");
-}).prefix("api");
-
-
+  Route.post("confirmation", "ConfirmationsController.confirm")
+}).prefix("api")
