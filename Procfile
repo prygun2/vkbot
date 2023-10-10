@@ -1,1 +1,1 @@
-web: node ./node_modules/.bin/ace serve
+web: node ace serve
