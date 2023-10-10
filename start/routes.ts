@@ -18,9 +18,10 @@
 |
 */
 
-import Route from '@ioc:Adonis/Core/Route'
+import Route from "@ioc:Adonis/Core/Route"
 
 Route.group(() => {
-  Route.post('/', 'CallbackVkController.run').prefix('callback-vk')
-}).prefix('api')
-
+  Route.post("/", "CallbackVkController.run").prefix("callback-vk")
+})
+  .prefix("api")
+  .middleware("checkCallbackSecret")

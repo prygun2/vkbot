@@ -10,6 +10,7 @@ export default class CallbackVkController {
 
   async run({ request, response }: HttpContextContract) {
     const data = request.all()
+
     const result = this.requestService.process(data)
 
     return response.status(200).send(result)

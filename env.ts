@@ -23,4 +23,5 @@ export default Env.rules({
   NODE_ENV: Env.schema.enum(["development", "production", "test"] as const),
   GROUP_ID: Env.schema.number(),
   CONFIRMATION_STRING: Env.schema.string(),
+  CALLBACK_SECRET: Env.schema.string(),
 })
