@@ -1,9 +1,0 @@
----
-meta:
-  environment: node
-  toolchain:
-    name: npm
-    version: 14
-run:
-  scriptName: server.ts
-  containerPort: 80
