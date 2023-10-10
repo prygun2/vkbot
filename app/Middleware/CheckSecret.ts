@@ -1,18 +1,18 @@
 import type { HttpContextContract } from "@ioc:Adonis/Core/HttpContext"
 import Env from "@ioc:Adonis/Core/Env"
 
+const INVALID_SECRET_MESSAGE = "Bad request"
+
 export default class CheckSecret {
   public async handle(
     { request, response }: HttpContextContract,
     next: () => Promise<void>,
   ) {
-    const secretFromRequest: { secret: any } = request.only(["secret"])
-    console.log(`secretFromRequest:`, secretFromRequest)
-    const secret = Env.get("CALLBACK_SECRET")
-    console.log(`secret:`, secret)
+    const secretFromRequest: string = request.input("secret")
+    const secret: string = Env.get("CALLBACK_SECRET") as string
 
-    if (secretFromRequest.secret !== secret) {
-      return response.status(400).send("Error request: secret is not ok")
+    if (secretFromRequest !== secret) {
+      return response.status(400).send(INVALID_SECRET_MESSAGE)
     }
 
     await next()
