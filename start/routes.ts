@@ -21,6 +21,6 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.group(() => {
-  Route.post('/', 'CallbackVkController.run').prefix('test')
+  Route.post('/', 'CallbackVkController.run').prefix('callback-vk')
 }).prefix('api')
 
