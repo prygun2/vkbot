@@ -25,10 +25,15 @@
         "./database/*"
       ]
     },
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
     "types": [
       "@adonisjs/core",
       "@adonisjs/repl",
-      "@japa/preset-adonis/build/adonis-typings"
+      "@japa/preset-adonis/build/adonis-typings",
+      "./types/adonis-typings"
     ]
   }
 }

@@ -39,5 +39,6 @@ Server.middleware.register([() => import("@ioc:Adonis/Core/BodyParser")])
 |
 */
 Server.middleware.registerNamed({
-  checkCallbackSecret: () => import("App/Middleware/CheckSecret"),
+  checkGroupId: () => import("App/Middleware/CheckGroupId"),
+  serviceSetter: () => import("App/Middleware/ServiceSetter"),
 })

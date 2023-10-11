@@ -24,4 +24,4 @@ Route.group(() => {
   Route.post("/", "CallbackVkController.run").prefix("callback-vk")
 })
   .prefix("api")
-  .middleware("checkCallbackSecret")
+  .middleware(["checkGroupId", "serviceSetter"])

@@ -24,4 +24,8 @@ export default Env.rules({
   GROUP_ID: Env.schema.number(),
   CONFIRMATION_STRING: Env.schema.string(),
   CALLBACK_SECRET: Env.schema.string(),
+  VK_API_URL: Env.schema.string(),
+  VK_API_ACCESS_TOKEN: Env.schema.string(),
+  VK_API_GROUP_ACCESS_TOKEN: Env.schema.string(),
+  CORRECT_CITY_ID: Env.schema.number(),
 })

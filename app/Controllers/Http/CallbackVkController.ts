@@ -1,17 +1,18 @@
 import type { HttpContextContract } from "@ioc:Adonis/Core/HttpContext"
-import RequestService from "App/Services/RequestService"
 
 export default class CallbackVkController {
-  private requestService: RequestService
-
-  constructor() {
-    this.requestService = new RequestService()
-  }
-
   async run({ request, response }: HttpContextContract) {
     const data = request.all()
+    const service = data.serviceInstance
 
-    const result = this.requestService.process(data)
+    let result
+
+    try {
+      result = await service.process(data)
+    } catch (e) {
+      console.log(`e:`, e)
+      return response.status(400).send(e.message)
+    }
 
     return response.status(200).send(result)
   }
